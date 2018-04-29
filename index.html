@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>家电</title>
+	<link rel="stylesheet" href="css/gwidth.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/phone.css" >
+  <link rel="stylesheet" href="css/pad.css" media="(min-width:768px)">
+  <link rel="stylesheet" href="css/pc.css" media="(min-width:1024px)">
+  <meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=0">
+	   <script>
+		   alert(window.screen.width)
+	    window.onload = window.onresize = function(){
+	        var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+			//找到标签名为html的第一个
+	        var _html = document.getElementsByTagName('html')[0];
+			//如果屏幕宽度大于640
+			//就用 640/16=40
+			//小于640的时候 不确定 也是尺寸/40
+	        view_width>640?_html.style.fontSize = 640 / 16 + 'px':_html.style.fontSize = view_width / 16 + 'px';
+			//最大网页尺寸640
+			//最大字体（根字体大小） 40
+	    }
+	</script>
+	<style>
+		.box{
+				width: 100%;
+				height: 360px;
+				-border: 10px solid skyblue;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+				margin-top: 70px;
+				}
+			.imgs{
+				width: 100%;
+				height: 360px;
+				position: relative;
+				}
+			.imgs li{
+				width: 100%;
+				height: 360px;
+				position: absolute;
+				top: 0; left: 0;
+				opacity: 0;
+				transition: .5s;
+				}
+				img{
+					width: 100%;
+					height: 100%;
+				}
+				.point{
+					position: absolute;
+					bottom: 20px; left: 45%;
+				}
+				.point span{
+					display: inline-block;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					border: 2px solid #CCC;
+					background-color: skyblue;
+					cursor: pointer;
+				}
+				.point span.act,.point span:hover{
+					background-color: pink;
+				}
+				.a{
+					display: inline-block;
+					width: 30px;
+					height: 30px;
+					background-color: rgba(0, 0, 0, 1.0);
+					text-align: center;
+					line-height: 30px;
+					font-size: 20px;
+					color: #FFF;
+					font-weight: bold;
+					position: absolute;
+					top: 45%;
+					opacity: 0;
+				}
+				#prev{
+					left: 0px;
+					border-radius: 0px 5px 5px 0px;
+				}
+				#next{
+					right: 0px;
+					border-radius: 5px 0px 0px 5px;
+				}
+				.box:hover .a {
+					opacity: .5;
+				}
+				.box .a:hover{
+					opacity: .8;
+				}
+				.imgs li.act{
+					opacity: 1;
+				}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="images/logo.png">
+		</div>
+		<div class="minu">
+			<span class="muin">
+			<a href="#" class="iconfont d" id="button1">&#xe682;</a>
+			</span>
+			<ul class="shu" id="div1">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">企业文化</a></li>
+				<li><a href="#">案例展示</a></li>
+				<li><a href="#">新闻资讯</a></li>
+				<li><a href="#">在线留言</a></li>
+			</ul>
+		</div>
+		<ul class="pc_nav">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">企业文化</a></li>
+				<li><a href="#">案例展示</a></li>
+				<li><a href="#">新闻资讯</a></li>
+				<li><a href="#">在线留言</a></li>
+			</ul>
+	</header>
+	<div class="box" id="box">
+			<ul class="imgs" id='imgs'>
+				<li><a href="###"><img src="images/banner.png"></a></li>
+				<li><a href="###"><img src="images/gongsijianjie.png"></a></li>
+				<li><a href="###"><img src="images/dian2.png"></a></li>
+			</ul>
+			<div class="point" id="point">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<a href="###" id="prev" class="a">&lt;</a>
+			<a href="###" id="next" class="a">&gt;</a>
+		</div>
+		<div class="good">
+			<ul class="batter">
+				<li>
+					<p class="iconfont">&#xe607;</p>
+					<p class="bold">100%</p>
+					<p>保正满意</p>
+				</li>
+				<li>
+					<p class="iconfont">&#xe604;</p>
+					<p class="bold">3000</p>
+					<p>用户使用</p>
+				</li>
+				<li>
+					<p class="iconfont">&#xe6bd;</p>
+					<p class="bold">100</p>
+					<p>用户商家</p>
+				</li>
+			</ul>
+		</div>
+		<div class="gszz">
+			<h1>公司宗旨</h1>
+			<p>
+				方太商城于2016年5月12日起全面推行电子发票
+				支持货到付款，送货上门，安全放心！下单前请和客服核对服务区域，以确保您的安装地址在我们的派送及服务范围内！
+			</p>
+		</div>
+		<div class="gsjj">
+			<h1>公司简介</h1>
+			<p class="con">
+				方太商城于2016年5月12日起全面推行电子发票
+				支持货到付款，送货上门，安全放心！下单前请和客服核对服务区域，以确保您的安装地址在我们的派送及服务范围内！
+			</p>
+			<p class="con">
+				方太商城于2016年5月12日起全面推行电子发票
+				支持货到付款，送货上门，安全放心！下单前请和客服核对！
+			</p>
+			<div class="img">
+				<img src="images/gongsijianjie.png">
+			</div>
+		</div>
+		<div class="cpzs">
+			<h1>产品展示</h1>
+			<div id="zxc">
+					<ul>
+						<li class="on">电暖气</li>
+						<li>小家电</li>
+						<li>制冷电器</li>
+						<li>厨房电器</li>
+					</ul>
+				</div>
+					<div id="boxs">
+						<div class="show">
+							<img src="images/dq.png">
+							<img src="images/dian1.png">
+							<img src="images/dq.png">
+							<img src="images/gongsijianjie.png">
+						</div>
+						<div>
+							<img src="images/banner.png" alt="">
+							<img src="images/banner.png" alt="">
+							<img src="images/banner.png" alt="">
+							<img src="images/banner.png" alt="">
+						</div>
+						<div>
+							<img src="images/dian2.png" alt="">
+							<img src="images/dian2.png" alt="">
+							<img src="images/dian2.png" alt="">
+							<img src="images/dian2.png" alt="">
+						</div>
+						<div>
+							<img src="images/dian1.png" alt="">
+							<img src="images/dian1.png" alt="">
+							<img src="images/dian1.png" alt="">
+							<img src="images/dian1.png" alt="">
+						</div>
+					</div>
+		</div>
+		<div class="sd">
+			<div class="aa">
+				<h1>三大优势</h1>
+				<p>1.水电费看见谁离开房间了；上课讲道理开始了快速冷冻刚开始剧烈的高考时间段高速路口</p>
+				<p>
+					2.水电费看见谁离开房间了；上课讲道理开始了快速冷冻刚开始剧烈的高考时间段高速路口
+				</p>
+				<p>
+					3.水电费看见谁离开房间了；上课讲道理开始了快速冷冻刚开始剧烈的高考时间段高速路口
+				</p>
+			</div>
+		</div>
+		<div class="hz">
+			<h1>合作联盟，优势互补好联盟</h1>
+			<p>收款方很深刻的计划付款垃圾光辉拉科技规划立刻就按个航空个大的科技馆好困好贵的空划过真的，好的概率很高</p>
+			<p>收款方划立刻就感觉华科技和噶科技华科技馆哈克斯几个大的科技馆好困好贵的空间规划过真的，好的概率很高</p>
+		</div>
+		<div class="xzx">
+			<h1>新资讯</h1>
+			<ul>
+				<li class="l">
+					<img src="images/dian1.png">
+					<p class="p1">阿来得及史莱克拉康师傅啦轮廓拉发科技案</p>
+					<p class="p2">快乐理发手动封口机，健身房和空间上课阿卡就看案件发货阿拉就刷卡机拉开发好愧疚爱空间哈客家话爱空间</p>
+				</li>
+				<li class="r">
+					<img src="images/dian2.png">
+					<p class="p1">阿来得及史莱克拉康师傅啦轮廓拉发科技案</p>
+					<p class="p2">快乐理发手动封口机，健身房和空间上课阿卡就看案件发货阿拉就刷卡机拉开发好愧疚爱空间哈客家话爱空间</p>
+				</li>
+			</ul>
+		</div>
+		<div class="footer">
+			<p>Copy 2016 All rights版权有莫某某没露面梵蒂冈电饭锅房东是个是的普有限公司</p>
+			<p>鸿蒙网络有限公司技术支持</p>
+			<p>入云四大快递来看待拉卡拉</p>
+			<p>中国云额罚款分类；拉菲口服类看法来看拉开l</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+	window.onload=show;
+	function show(){
+	    var bt=document.getElementById("button1");
+	    bt.onclick=function(){
+	        var oDiv=document.getElementById("div1");
+	        if(oDiv.style.display=="block"){
+	            oDiv.style.display="none";
+	        }else{
+	            oDiv.style.display="block";
+	        }
+	    }
+	}
+	</script>
+	<script>
+	function $(id) {
+		return document.getElementById(id);
+	}
+	var index=0;
+	var box=$('box');
+	var imgs=$('imgs').getElementsByTagName('li');
+	var point=$('point').getElementsByTagName('span');
+	imgs[index].className='act';
+	point[index].className='act';
+	var btnLen=point.length;
+	var prev=$('prev');
+	var next=$('next');
+	var t=null;
+	for(var i=0;i<btnLen;i++) {
+		point[i].i=i;
+		point[i].onmouseover=function(){
+			imgs[index].className='';
+			point[index].className='';
+			index=this.i;
+			imgs[index].className='act';
+			this.className='act';
+		}
+	}
+	function move(dir) {
+		var oldIndex=index;
+		index=index+dir;
+		if(index<0){
+			index=btnLen-1;
+		}
+		if(index>btnLen-1){
+			index=0;
+		}
+		imgs[oldIndex].className='';
+		point[oldIndex].className='';
+		imgs[index].className='act';
+		point[index].className='act';
+	}
+	prev.onclick=function(){
+		move(-1);
+	}
+	next.onclick=function(){
+		move(1);
+	}
+	box.onmouseover=function(){
+		clearInterval(t);
+	}
+	box.onmouseout=function(){
+		t=setInterval(next.onclick,2000);
+	}
+	box.onmouseout();
+	</script>
+	<script type="text/javascript">
+		function $(id) {
+				return document.getElementById(id);
+			}
+			var lis=$('zxc').getElementsByTagName('li');
+			var divs=$('boxs').getElementsByTagName('div');
+			for(var i=0;i<lis.length;i++){
+				lis[i].index=i;
+				lis[i].onclick=function(){
+					for(var i=0;i<lis.length;i++){
+						lis[i].className='';
+					}
+					this.className='on';
+					for(var i=0;i<divs.length;i++){
+						divs[i].className='';
+					}
+					divs[this.index].className='show';
+				}
+			}
+	</script>
+</body>
+</html>
